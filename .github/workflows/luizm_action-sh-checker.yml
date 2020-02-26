@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run the sh-checker
-        uses: luizm/action-sh-checker@v0.1.0
+        uses: luizm/action-sh-checker@v0.1.2
         env:
           SH_CHECKER_EXCLUDE_REGEX: '/.terraform/*'
           # SH_CHECKER_EXCLUDE_REGEX: '/.terraform/\'
