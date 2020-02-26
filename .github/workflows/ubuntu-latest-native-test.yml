@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: apt list --installed
+      run: apt list --installed
+    - name: dpkg -l
+      run: dpkg -l
+    - name: hash shellcheck, 
+      run: |
+        hash shellcheck
+        hash | grep shellcheck
+    - name: shellcheck --version
+      run: shellcheck --version
+    - name: Run a one-line script
+      run: echo Hello, world!
+
