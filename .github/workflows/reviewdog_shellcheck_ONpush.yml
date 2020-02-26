@@ -2,11 +2,11 @@ name: reviewdog
 on: [push]
 jobs:
   reviewdog-shellcheck-ONpush:
-    name: runner / shellcheck
+    name: runner / shellcheck ONpush
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: shellcheck
+      - name: shellcheck-ONpush
         uses: reviewdog/action-shellcheck@v1
         with:
           github_token: ${{ secrets.github_token }}
