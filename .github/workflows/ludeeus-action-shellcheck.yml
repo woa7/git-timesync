@@ -1,0 +1,15 @@
+on: push
+name: ShellCheck
+jobs:
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: ludeeus-shellcheck
+      # uses: ludeeus/action-shellcheck@0.0.1
+      # uses: ludeeus/action-shellcheck@0.1.0
+      uses: ludeeus/action-shellcheck@master
+      # env:
+      #  SHELLCHECK_OPTS: -e SC1091
+      # with:
+      #  args: wireguard-install.sh
