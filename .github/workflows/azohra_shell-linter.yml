@@ -9,8 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-    - name: Lint check
+    - name: Lint check, azohra_shell-linter
       uses: azohra/shell-linter@v0.2.0
       #with:
         # path: "src/*.sh"
